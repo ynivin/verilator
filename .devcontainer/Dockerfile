@@ -8,7 +8,7 @@ RUN dnf install -y git autoconf flex bison make cmake g++ \
 
 RUN cpan -i Pod::Perldoc Unix::Processors Parallel::Forker Bit::Vector
 
-ARG USER=verilator
+ARG USER=verilator-dev
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
