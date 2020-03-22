@@ -1,0 +1,5 @@
+# Build image
+sudo docker build .devcontainer/ -t ynivin/verilator-dev --build-arg USER_UID=$(id -u) --build-arg USER_GID=$(id -g)
+
+# Run container
+sudo docker run -it -v ${PWD}:/home/verilator-dev/git/verilator:Z -w /home/verilator-dev/git/verilator --security-opt seccomp=unconfined ynivin/verilator-dev
